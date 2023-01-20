@@ -50,22 +50,22 @@ const CreateNew = () => {
     }
     return (
         <form className="create" onSubmit={handleSubmit}>
-            <h3>Add A New Piece Of Content Here:</h3>
-            <label>Title:</label>
+            <h3><strong>Add A New Piece Of Content Here:</strong></h3>
+            <label><strong>Title:</strong></label>
             <input
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
                 className={emptyFields.includes("title") ? "error" : ""}
             />
-            <label>Paste content here:</label>
-            <input
+            <label><strong>Paste content here:</strong></label>
+            <textarea
                 type="text"
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
                 className={emptyFields.includes("body") ? "error" : ""}
             />
-            <label>Paste or type tags here:</label>
+            <label><strong>Paste or type tags here:</strong></label>
             <input
                 type="text"
                 onChange={(e) => setTags(e.target.value)}

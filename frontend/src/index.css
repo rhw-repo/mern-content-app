@@ -46,9 +46,9 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 1.5rem;
+  height: 1rem;
   width: 100vw;
-  padding: 1.33rem 0.66rem;
+  padding: 0.75rem 0;
   background-color: #ABAEB6;
   font-family: 'Lexend Deca', Helvetica, Arial, Lucida, sans-serif;
 }
@@ -99,6 +99,21 @@ footer a {
   padding: 1rem 0;
 }
 
+.material-details button  {
+  height: auto;
+  width: 5rem;
+  color: #fff;
+  background: var(--primary);
+  font-family: "Lexend Deca", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0;
+  margin: 1rem 0;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 /* for delete button */
 .material-details span {
   position: absolute;
@@ -118,18 +133,29 @@ h3 {
 }
 
 label,
-input {
+input, 
+textarea {
   display: block;
 }
 
-input {
+input,
+textarea {
   padding: 0.625rem;
   margin-top: 0.625rem;
   margin-bottom: 1.25rem;
-  width: 100%;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 20.5rem;
+  height: 10rem;
+
 }
 
 form button {
