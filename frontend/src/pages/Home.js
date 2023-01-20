@@ -32,7 +32,6 @@ const Home = () => {
     fetchMaterials()
   }, [dispatch])
 
-
   return (
     <div className="home">
       <div className="materials">

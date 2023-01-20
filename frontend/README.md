@@ -17,8 +17,7 @@ React.js (using Create React App)
 ## **Next ToDos:** 
 
 ### **Globally**
-1) Upgrade to latest version of react-router
-2) Test migration from Create React App to Vite 
+1) Test migration from Create React App to Vite 
 
 
 ### **Home Page**
