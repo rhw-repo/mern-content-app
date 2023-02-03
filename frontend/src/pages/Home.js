@@ -15,9 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchMaterials = async () => {
       const response = await fetch('/api/materials', {
-        headers: {
-          "Authorization": `Bearer ${user.token}`
-        }
+        headers: {"Authorization": `Bearer ${user.token}`},
       })
       const json = await response.json()
 
@@ -30,13 +28,13 @@ const Home = () => {
       fetchMaterials()
     }
     fetchMaterials()
-  }, [dispatch])
+  }, [dispatch, user])
 
   return (
     <div className="home">
       <div className="materials">
         {materials && materials.map(material => (
-          <MaterialDetails material={material} key={material._id} />
+          <MaterialDetails key={material._id} material={material} />
         ))}
       </div>
       <CreateNew />
@@ -44,4 +42,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Home

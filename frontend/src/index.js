@@ -14,6 +14,6 @@ root.render(
       </MaterialsContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
-)
+);
 
 
