@@ -5,7 +5,7 @@ import { useMaterialsContext } from "./useMaterialsContext";
 export const useLogout = () => {
 
     const { dispatch } = useAuthContext()
-    const { dispatch: materialsDispatch } = useMaterialsContext()
+    const { dispatch: dispatchMaterials} = useMaterialsContext()
 
     const logout = () => {
         // remove user from storage 
@@ -13,7 +13,7 @@ export const useLogout = () => {
 
         // dispatch logout action
         dispatch({ type: "LOGOUT" })
-        materialsDispatch({ type: "SET WORKOUTS", payload: null })
+        dispatchMaterials({ type: "SET WORKOUTS", payload: null })
     }
 
     return { logout }

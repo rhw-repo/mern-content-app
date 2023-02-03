@@ -21,7 +21,7 @@ const userSchema = new Schema({
 
 // static signup method check email does not already exist = if so send error message
 // function keyword not arrow function due to this keyword
-userSchema.statics.signup = async function (email, password) {
+userSchema.statics.signup = async function(email, password) {
 
     //validation
     if (!email || !password) {
