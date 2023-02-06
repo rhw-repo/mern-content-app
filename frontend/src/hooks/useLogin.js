@@ -20,7 +20,9 @@ export const useLogin = () => {
         if (!response.ok) {
             setIsLoading(false)
             setError(json.error)
+            localStorage.removeItem("user")
         }
+        
         if (response.ok) {
             // save the user to local storage
             localStorage.setItem("user", JSON.stringify(json))
