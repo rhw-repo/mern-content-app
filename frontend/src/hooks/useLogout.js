@@ -5,15 +5,15 @@ import { useMaterialsContext } from "./useMaterialsContext";
 export const useLogout = () => {
 
     const { dispatch } = useAuthContext()
-    const { dispatch: dispatchMaterials} = useMaterialsContext()
+    const { dispatch: dispatchMaterials } = useMaterialsContext()
 
     const logout = () => {
         // remove user from storage 
         localStorage.removeItem("user")
 
         // dispatch logout action
-        dispatch({ type: "LOGOUT" })
-        dispatchMaterials({ type: "SET WORKOUTS", payload: null })
+        dispatch({type: "LOGOUT"})
+        dispatchMaterials({type: "SET_MATERIALS", payload: null})
     }
 
     return { logout }
