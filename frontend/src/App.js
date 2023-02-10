@@ -6,6 +6,7 @@ import { useAuthContext } from './hooks/useAuthContext'
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import Read from "./pages/Read"
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
@@ -30,6 +31,11 @@ function App() {
               path="/signup"
               element={!user ? <Signup /> : <Navigate to="/" />}
             />
+            <Route
+              path="/articles/:id"
+              element={!user ? <Signup /> : <Read />}
+            />
+          
           </Routes>
         </div>
         <Footer />
