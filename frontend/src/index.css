@@ -81,6 +81,10 @@ footer a {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+.material-details a {
+  text-decoration: none;
+}
+
 .material-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
@@ -98,6 +102,7 @@ footer a {
   /*border: 1px solid #616161;*/
   padding: 1rem 0;
 }
+
 
 /* for delete button */
 .material-details span {
