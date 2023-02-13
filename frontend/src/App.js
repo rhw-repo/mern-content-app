@@ -32,7 +32,7 @@ function App() {
               element={!user ? <Signup /> : <Navigate to="/" />}
             />
             <Route
-              path="/articles/:id"
+              path="/articles/:_id"
               element={!user ? <Signup /> : <Read />}
             />
           
