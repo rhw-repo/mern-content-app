@@ -32,6 +32,7 @@ const MaterialDetails = ({ material }) => {
             <Link to={`/articles/${material._id}`}>
                 <h4>{material.title}</h4>
                 <p>{material.body}</p>
+                <p>id is {material._id}</p>
                 <h5>Tags: <br />{material.tags}</h5>
                 <p>{formatDistanceToNow(new Date(material.createdAt), { addSuffix: true })}</p>
                 <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
