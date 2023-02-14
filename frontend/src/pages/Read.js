@@ -1,4 +1,4 @@
-// sets layout and injects individual article into template using route parameters & useParams
+// sets layout and injects specified user input (one article) into template using route parameters & useParams
 
 // constant called _id is equal to built in react hook useParams
 // allows access to _id of individual piece of content stored in database (uses _id for assigning ids)
@@ -19,13 +19,14 @@ const Read = () => {
 
     return ( 
        <div className="read">
-        <h2>Content Detail - { _id }</h2>
+        <h3>Id is { _id }</h3>
         { isPending && <div>Loading...</div> }
         { error && <div>{ error }</div>}
         { material && (
             <article>
-                <h2>{ material.title}</h2>
+                <div className="read_title">{ material.title}</div>
                 <div>{ material.body }</div>
+                <div>{ material.tags }</div>
             </article>
         )} 
        </div>
