@@ -1,3 +1,5 @@
+//displays input
+
 import { useMaterialsContext } from "../hooks/useMaterialsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 import { Link } from "react-router-dom"
@@ -5,6 +7,7 @@ import { Link } from "react-router-dom"
 // date fns
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
+// line 36 tests _id is correct
 const MaterialDetails = ({ material }) => {
 
     const { dispatch } = useMaterialsContext()
@@ -34,7 +37,7 @@ const MaterialDetails = ({ material }) => {
                 <p>{material.body}</p>
                 <p>id is {material._id}</p>
                 <h5>Tags: <br />{material.tags}</h5>
-                <p>{formatDistanceToNow(new Date(material.createdAt), { addSuffix: true })}</p>
+                <p>Created {formatDistanceToNow(new Date(material.createdAt), { addSuffix: true })}</p>
                 <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
             </Link>
         </div>
