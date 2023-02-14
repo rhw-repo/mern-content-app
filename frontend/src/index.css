@@ -13,7 +13,7 @@ body {
   font-family: "Open Sans", "Helvetica", Arial, sans-serif;
 }
 
-/* navbar - alternative to position: sticky is custom hook */
+/* navbar */
 header {
   position: sticky;
   top: 0px;
@@ -39,7 +39,7 @@ header a {
   text-decoration: none;
 }
 
-/* alternative to position: fixed is custom hook*/
+/* footer */
 footer {
   text-align: center;
   position: fixed;
@@ -72,13 +72,15 @@ footer a {
   gap: 100px;
 }
 
-.material-details {
+/* displaying input (articles, material) */
+.material-details,
+.read {
   background: #fff;
-  border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
+  border-radius: 0.625rem;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
 }
 
 .material-details a {
@@ -86,7 +88,7 @@ footer a {
 }
 
 .material-details h4 {
-  margin: 0 0 10px 0;
+  margin: 0 0 1.5rem 0;
   font-size: 1.2em;
   color: var(--primary);
 }
@@ -96,13 +98,11 @@ footer a {
   margin: 0;
   font-size: 0.9em;
   color: #555;
-}
+  }
 
 .material-details h5 {
-  /*border: 1px solid #616161;*/
   padding: 1rem 0;
 }
-
 
 /* for delete button */
 .material-details span {
@@ -116,8 +116,19 @@ footer a {
   color: #333;
 }
 
-/* create new material form */
+/* displaying input on read page*/
+.read_title {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.3 rem;
+}
 
+.read div {
+  margin: 1.3rem;
+}
+
+/* create new material form */
 h3 {
   color: #435362;
 }
@@ -207,5 +218,6 @@ form.login {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
+
