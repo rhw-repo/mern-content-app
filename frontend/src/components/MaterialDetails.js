@@ -38,8 +38,8 @@ const MaterialDetails = ({ material }) => {
                 <p>id is {material._id}</p>
                 <h5>Tags: <br />{material.tags}</h5>
                 <p>Created {formatDistanceToNow(new Date(material.createdAt), { addSuffix: true })}</p>
-                <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
             </Link>
+            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
     );
 }
