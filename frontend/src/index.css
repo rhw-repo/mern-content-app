@@ -46,7 +46,7 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 1.5rem;
+  height: 0.5rem;
   width: 100vw;
   padding: 1.33rem 0.66rem;
   background-color: #ABAEB6;
@@ -134,14 +134,15 @@ h3 {
 }
 
 label,
-input {
+input, 
+textarea {
   display: block;
 }
 
-input {
+input, 
+textarea {
   padding: 0.625rem;
-  margin-top: 0.625rem;
-  margin-bottom: 1.25rem;
+  margin: 0.625rem auto;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
