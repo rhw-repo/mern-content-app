@@ -31,7 +31,6 @@ const CreateNew = () => {
             }
         })
 
-
         const json = await response.json()
 
         if (!response.ok) {
@@ -59,8 +58,10 @@ const CreateNew = () => {
                 className={emptyFields.includes("title") ? "error" : ""}
             />
             <label>Paste content here:</label>
-            <input
-                type="text"
+            <textarea
+                //name="body"
+                rows={10}
+                cols={40}
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
                 className={emptyFields.includes("body") ? "error" : ""}
