@@ -1,6 +1,6 @@
 # **Demo App**
 
-Early full stack experiments using MERN stack for an app designed to help users store and manage documents like text for blog and social media posts. 
+Experiments using MERN stack for an app designed to help users store and manage documents like text )(or links to Google Docs) for blog and social media posts. 
 
 - create account, login / logout (JSON Web Tokens)
 - protected API routes = after succesful login, user may now access just their own set of documents 
@@ -13,8 +13,11 @@ Express
 Node.js 
 React.js (using Create React App)
 
+Testing requests: Postman API Platform
+Original design files: Figma
 
-## **Next ToDos: work in progress now in repo mern-migrate-router** 
+
+## **Next ToDos: work in progress** 
 
 ### **Globally**
 1) Upgrade to latest version of react-router = complete in mern-migrate-router repo, now adding features
@@ -22,12 +25,10 @@ React.js (using Create React App)
 
 
 ### **Home Page**
-1) "Read Only" and "Update" (editable) views of individual documents onClick from the "dashboard" -
-early experiment with adding a button to fire function rendering page Read.js, now working with route parameters instead, in mern-migrate-router repo. 
+1) "Update" (editable) views of individual documents onClick from the "dashboard" -
+PATCH requests and rendering the view from Read.js component (the read only view). 
 
-2) "Paste Content Here" input field on form changes to text area (better user experience) 
-
-3) Multiselect dropdown menus:
+2) Multiselect dropdown menus:
 
     a.) to allow selection of tags instead of inputting them by typing 
     
