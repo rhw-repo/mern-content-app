@@ -16,5 +16,5 @@ export const useLogout = () => {
         dispatchMaterials({type: "SET_MATERIALS", payload: null})
     }
 
-    return { logout }
+    return  { logout }
 }
