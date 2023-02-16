@@ -128,6 +128,26 @@ footer a {
   margin: 1.3rem;
 }
 
+.read button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  height: 4rem;
+  width: 15rem;
+  padding: 0.625rem;
+  font-family: "Lexend Deca", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.read button:active {
+  background-color: #854845;
+  box-shadow: 0 0.3125rem #666;
+  transform: translateY(0.25rem);
+}
+
 /* create new material form */
 h3 {
   color: #435362;
