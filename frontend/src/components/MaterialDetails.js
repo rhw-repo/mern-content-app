@@ -13,6 +13,7 @@ const MaterialDetails = ({ material }) => {
     const { dispatch } = useMaterialsContext()
     const { user } = useAuthContext()
 
+    // fires when delete button clicked, sends DELETE request to middleware to pass to backend
     const handleClick = async () => {
         if (!user) {
             return
