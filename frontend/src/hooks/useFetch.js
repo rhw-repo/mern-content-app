@@ -9,7 +9,7 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
-        console.log(user)
+       // console.log(user)
       fetch(url, {
         headers: {"Authorization": `Bearer ${user.token}`},
       })
@@ -31,7 +31,7 @@ const useFetch = (url) => {
         setisPending(false)
         setError(err.message)
       })
-      })
+      }, [])
 
       return {
         data,
