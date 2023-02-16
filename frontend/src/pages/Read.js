@@ -1,8 +1,5 @@
 // sets layout and injects specified user input (one article) into template using route parameters & useParams
 
-import { useMaterialsContext } from "../hooks/useMaterialsContext"
-import { useAuthContext } from "../hooks/useAuthContext"
-
 // constant called _id is equal to built in react hook useParams
 // allows access to _id of individual piece of content stored in database (uses _id for assigning ids)
 // { _id } in template allows output into this component to test being passed
@@ -13,32 +10,19 @@ import { useParams } from "react-router-dom"
 // returns data (individual article), isPending (true or false), error (if any, with message)
 
 import useFetch from "../hooks/useFetch"
+import Update from "./Update"
 
 // data is called material consitency across app, evaluated in template if present, renders properties
 // value name && - && evaluates anything left of it, if true, executes anything to right of it 
 const Read = () => {
     const { _id } = useParams()
     const { data: material, error, isPending } = useFetch("/api/materials/" + _id);
-    const { user } = useAuthContext()
-    const { dispatch } = useMaterialsContext()
 
-    // sends a PATCH request to middleware to pass to backend 
-    const handleUpdate = async () => {
-        if (!user) {
-            return
-        }
-        const response = await fetch("api/materials/" + material._id, {
-            method: "PATCH",
-            headers: {
-                "Authorization": `Bearer ${user.token}`
-            }
-        })
-        const json = await response.json()
-
-        if (response.ok) {
-            dispatch({ type: "UPDATE_MATERIAL", payload: json })
-        }
-    }
+    /*const handleUpdate = (e) => {
+        return (
+            
+        )
+    }*/
 
     return ( 
        <div className="read">
@@ -52,7 +36,7 @@ const Read = () => {
                 <div>{ material.tags }</div>
             </article>
         )} 
-        <span className="update-btn" ><button onClick={handleUpdate}>Update</button></span>
+     {/*<span className="update-btn"><button onClick={handleUpdate}>Update</button></span>*/}
        </div>
     );
 }
