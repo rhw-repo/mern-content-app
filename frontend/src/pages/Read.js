@@ -4,27 +4,33 @@
 // allows access to _id of individual piece of content stored in database (uses _id for assigning ids)
 // { _id } in template allows output into this component to test being passed
 
+import { useState } from "react"
 import { useParams } from "react-router-dom"
 
 // custom hook useFetch created to make the API fetch, code could be refactored to be used also for Home.js
 // returns data (individual article), isPending (true or false), error (if any, with message)
 
 import useFetch from "../hooks/useFetch"
-import Update from "./Update"
+import Edit from "./Edit"
 
 // data is called material consitency across app, evaluated in template if present, renders properties
 // value name && - && evaluates anything left of it, if true, executes anything to right of it 
 const Read = () => {
     const { _id } = useParams()
     const { data: material, error, isPending } = useFetch("/api/materials/" + _id);
+    const [isEditing, setIsEditing] = useState(false)
 
-    /*const handleUpdate = (e) => {
-        return (
-            
-        )
-    }*/
+   function handleUpdateClick() {
+        setIsEditing(true)
+    }
 
     return ( 
+        <div>
+            {isEditing ? (
+                <Edit materialId={materialId} />
+            ) : (
+
+
        <div className="read">
         <h3>Id is { _id }</h3>
         { isPending && <div>Loading...</div> }
@@ -36,7 +42,9 @@ const Read = () => {
                 <div>{ material.tags }</div>
             </article>
         )} 
-     {/*<span className="update-btn"><button onClick={handleUpdate}>Update</button></span>*/}
+     <span className="update-btn"><button onClick={handleUpdateClick}>Update</button></span>
+       </div>
+            )}
        </div>
     );
 }
