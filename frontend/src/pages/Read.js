@@ -1,3 +1,8 @@
+//TODO 
+// analyse 
+// remove test line showing id
+// add CSS rules to tidy up appearance 
+
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
