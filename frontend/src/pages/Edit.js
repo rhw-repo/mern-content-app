@@ -1,4 +1,9 @@
-///     TODO analyse + debug line 28 navigate component is not working
+///     TODO 
+// analyse 
+// debug line 28 navigate component is not working to navigate away
+// remove test line showing id
+// add a pop up to tell user changes are saved 
+// add CSS rules to tidy up appearance 
 
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
