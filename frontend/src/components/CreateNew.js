@@ -60,7 +60,7 @@ const CreateNew = () => {
             <label>Paste content here:</label>
             <textarea
                 //name="body"
-                rows={10}
+                rows={8}
                 cols={40}
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
