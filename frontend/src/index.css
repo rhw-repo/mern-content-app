@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&family=Open+Sans:wght@300;400&display=swap');
 
-/* layout */
+/* general layout and color scheme */
 :root {
   --primary: #BD7374;
   ;
@@ -148,19 +148,24 @@ footer a {
   transform: translateY(0.25rem);
 }
 
-/* create new material form */
-h3 {
+/* create new material form & edit page form */
+h1 {
   color: #435362;
+  font-weight: 900;
+  text-align: center;
+  font-family: "Lexend Deca", Helvetica, Arial, sans-serif;
 }
 
 label,
 input, 
 textarea {
   display: block;
+  font-weight: bold;
 }
 
 input, 
 textarea {
+  font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
   padding: 0.625rem;
   margin: 0.625rem auto;
   width: 100%;
@@ -179,7 +184,7 @@ form button {
   font-family: "Lexend Deca", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  border-radius: 0.5rem;
+  border-radius: 1.875rem;
   cursor: pointer;
 }
 
@@ -194,7 +199,6 @@ div.error {
   background: #ffefef;
   border: 1px solid var(--error);
   color: var(--error);
-
   border-radius: 0.5rem;
   margin: 1.25rem 0;
 }
