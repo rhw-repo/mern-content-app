@@ -38,7 +38,7 @@ const Edit = ({ material, onUpdateComplete, navigate }) => {
 
   return (
     <div className="edit">
-      <h3>Edit Material</h3>
+      <h1>Edit This Content</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title:</label>
@@ -53,6 +53,7 @@ const Edit = ({ material, onUpdateComplete, navigate }) => {
           <label htmlFor="body">Body:</label>
           <textarea
             id="body"
+            rows={8}
             value={body}
             onChange={(e) => setBody(e.target.value)}
           ></textarea>
