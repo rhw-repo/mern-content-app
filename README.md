@@ -24,19 +24,17 @@ Original design files: Figma
 2) Test migration from Create React App to Vite 
 
 
-### **Home Page**
-1) "Update" (editable) views of individual documents onClick from the "dashboard" -
-PATCH requests and rendering the view from Read.js component (the read only view). 
+### **Home Page** 
 
-2) Multiselect dropdown menus:
+1) Multiselect dropdown menus:
 
     a.) to allow selection of tags instead of inputting them by typing 
     
     b.) to allow filtering of existing content 
 
-4) Searchbar to find individual documents by text search
+2) Searchbar to find individual documents by text search
 
-5) Edit Tags feature
+3) Edit Tags feature
 
 
 ### **Login Page**
