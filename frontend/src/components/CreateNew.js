@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useMaterialsContext } from "../hooks/useMaterialsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
+// if separate CreateNew into it's own page add - 
+//import { useNavigate } from "react-router-dom";
+
 
 const CreateNew = () => {
     const { dispatch } = useMaterialsContext()
@@ -11,6 +14,10 @@ const CreateNew = () => {
     const [tags, setTags] = useState("")
     const [error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([])
+// if separate CreateNew into it's own page add -
+   // const { navigate } = useNavigate()
+
+  
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -45,7 +52,9 @@ const CreateNew = () => {
             setEmptyFields([])
             console.log('new material added', json)
             dispatch({ type: "CREATE_MATERIAL", payload: json })
-        }
+        } 
+// if separate CreateNew into it's own page add -
+      //  navigate("/")
     }
     return (
         <form className="create" onSubmit={handleSubmit}>
