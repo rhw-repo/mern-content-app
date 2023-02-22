@@ -1,18 +1,19 @@
 ///     TODO 
-// analyse  and upgrade to a wysiswg editor
-// debug line 28 navigate component is not working to navigate away
-// remove test line showing id
-// add a pop up to tell user changes are saved 
-// add CSS rules to tidy up appearance 
+// upgrade to a wysiswg editor
+// create function that makes a pop up to tell user changes are saved, pass as argument line 10
+// call it line 35
 
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
 
-const Edit = ({ material, onUpdateComplete, navigate }) => {
+
+const Edit = ({ material }) => {
   const [title, setTitle] = useState(material.title);
   const [body, setBody] = useState(material.body);
   const [tags, setTags] = useState(material.tags);
   const { user } = useAuthContext()
+  const navigate = useNavigate()
 
   useEffect(() => {
     setTitle(material.title);
@@ -31,8 +32,7 @@ const Edit = ({ material, onUpdateComplete, navigate }) => {
       body: JSON.stringify(updatedMaterial),
     });
     if (response.ok) {
-      onUpdateComplete();
-      navigate(`/materials/${material._id}`);
+      navigate("/");
     }
   };
 
