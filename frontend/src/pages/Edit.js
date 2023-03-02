@@ -1,5 +1,5 @@
 ///     TODO 
-// upgrade to a wysiswg editor
+// upgrade to a wysiswg editor?
 // create function that makes a pop up to tell user changes are saved, pass as argument line 10
 // call it line 35
 
