@@ -8,6 +8,7 @@ export const useLogout = () => {
     const { dispatch: dispatchMaterials } = useMaterialsContext()
 
     const logout = () => {
+     
         // remove user from storage 
         localStorage.removeItem("user")
 
@@ -15,6 +16,7 @@ export const useLogout = () => {
         dispatch({type: "LOGOUT"})
         dispatchMaterials({type: "SET_MATERIALS", payload: null})
     }
-
+    
     return { logout }
+    
 }

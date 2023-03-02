@@ -7,12 +7,13 @@ import { Link } from "react-router-dom"
 // date fns
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
-// line 36 tests _id is correct
+// line 39 can be uncommented to check _id is correct
 const MaterialDetails = ({ material }) => {
 
     const { dispatch } = useMaterialsContext()
     const { user } = useAuthContext()
 
+    // fires when delete button clicked, sends DELETE request to middleware to pass to backend
     const handleClick = async () => {
         if (!user) {
             return
@@ -29,13 +30,13 @@ const MaterialDetails = ({ material }) => {
             dispatch({ type: "DELETE_MATERIAL", payload: json })
         }
     }
-
+ 
     return (
         <div className="material-details">
             <Link to={`/articles/${material._id}`}>
                 <h4>{material.title}</h4>
                 <p>{material.body}</p>
-                <p>id is {material._id}</p>
+                {/*<p>Id is {material._id}</p>*/}
                 <h5>Tags: <br />{material.tags}</h5>
                 <p>Created {formatDistanceToNow(new Date(material.createdAt), { addSuffix: true })}</p>
             </Link>

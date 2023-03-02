@@ -9,7 +9,9 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
+
        // console.log(user)
+
       fetch(url, {
         headers: {"Authorization": `Bearer ${user.token}`},
       })

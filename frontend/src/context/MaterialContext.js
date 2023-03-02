@@ -19,6 +19,10 @@ export const materialsReducer = (state, action) => {
             return {
                 materials: state.materials.filter((m) => m._id !== action.payload._id)
             }
+            case "UPDATE_MATERIAL":
+                return {
+                    materials: state.workouts.filter((m) => m._id === action.payload_id )
+                }
         default:
             return state
     }
